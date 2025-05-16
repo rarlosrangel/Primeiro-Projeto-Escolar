@@ -2,19 +2,19 @@ function setup() {
   createCanvas(400,400); 
 }
 
-let xJogador1 = 0;
-let xJogador2 = 0;
+let xJogador1 = 0; //jogador1
+let xJogador2 = 0; //jogador2
 
 function draw() {
   
   ativaJogo();
   desenhaJogadores();
   desenhaLinhaDeChegada();
-  verificaVencedor();
+  verificaVencedor(); //indica o vencedor da rodada
   
 }
   function ativaJogo(){ 
-  if (focused == true) {
+  if (focused == true) { //quando começar fica branco
     background("white");
   } else  {
     background("black")
@@ -23,8 +23,8 @@ function draw() {
  
  function desenhaJogadores(){
   textSize(40);
-  text("🐱‍🏍", xJogador1, 100);
-  text("🐱‍👤", xJogador2, 300);
+  text("🐱‍🏍", xJogador1, 100); //jogador1
+  text("🐱‍👤", xJogador2, 300); //jogador2
 }
 function desenhaLinhaDeChegada() {
   fill('black');
@@ -50,10 +50,10 @@ if (xJogador1 > 350) {
 }
 
  function keyReleased() {
-   if (key === "w") {
+   if (key === "w") { //aperte w e o boneco irá pra frente
      xJogador1 += random(20);
    }
-  if (key === "ç") {
+  if (key === "ç") { //aperte ç e o boneco irá pra frente
      xJogador2 += random(20);
    }
   
